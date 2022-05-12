@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<h2>GAME ĐOÁN SỐ</h2>
+<button onclick="game()">Chơi</button>
+<script>
+function game() {
+    let space = +prompt('Nhập khoảng muốn đoán');
+    let bingo = Math.floor(Math.random() * space);
+    let dem=0;
+    let guess;
+    do {
+         guess = +prompt('Nhập số bạn đoán');
+        if (guess < bingo) {
+            alert('Đoán số lớn hơn đi');
+        }
+        if (guess > bingo) {
+            alert('Đoán số nhỏ hơn thôi');
+        }
+        dem++;
+        if (dem ===3) {
+            alert('Bạn đã hết lượt đoán');
+            break;
+        }
+    }
+    while (guess !== bingo);
+    if (dem!==3) {
+        alert('Bạn đã đoán đúng');
+    }
+}
+</script>
+</body>
+</html>

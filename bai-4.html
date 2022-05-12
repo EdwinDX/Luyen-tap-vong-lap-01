@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số các chữ số');
+    let dem =1;
+    let check = false;
+    let i=1;
+    let j=0;
+    while (dem<=n) {
+        let z=j;
+        j=i+j;
+        i=z;
+        if (j%5===0) {
+            check=true;
+            dem++;
+            document.write(j+'<br>');
+        }
+    }
+</script>
+</body>
+</html>
