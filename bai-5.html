@@ -8,11 +8,11 @@
 <script>
     let dem=0;
     let sum=0;
-    for (let i=0,j=1;dem<20;dem++) {
+    for (let i=0,j=1;dem<3;dem++) {
+        sum+=i;
         let z=j;
         j=i+j;
         i=z;
-        sum+=i;
     }
     document.write(sum);
 </script>
