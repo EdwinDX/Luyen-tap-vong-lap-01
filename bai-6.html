@@ -8,12 +8,15 @@
 <script>
     let n = +prompt('Nhập số chữ số');
     let dem=1;
+    let sum = 0;
     for (let i=1;dem<=n;i++) {
         if (i%7===0) {
             document.write(i+'<br>');
+            sum+=i;
             dem++;
         }
     }
+    document.write(sum+'<br>');
 </script>
 </body>
 </html>
